@@ -51,7 +51,7 @@ export default function Screen() {
       if (locationSubscription) {
         locationSubscription.remove(); // Stop watching location when the component unmounts
       }
-      
+      socket.disconnect(); // Disconnect from the WebSocket server
     };
   }, []);
 
